@@ -1,7 +1,8 @@
 {
-  "HOME_SCREEN": {},
-  "EMPTY_SCREEN": {},
-  "SHARED": {},
+  "PRODUCTS_SCREEN": {
+    "FILTER_TITLE": "فلتر",
+    "PRODUCTS_SHOWN": "عرض المنتجات"
+  },
   "ERRORS": {
     "NO_INTERNET": "انت حاليا غير متصل بالانترنت"
   }
