@@ -27,11 +27,11 @@ export const getAllParentIds = (categories, id, parents = []) => {
 };
 
 export const getAllChildIds = (category, ids = []) => {
-  if (category.children) {
-    for (const child of category.children) {
+  if (category && category.children) {
+    category.children.forEach(child => {
       ids.push(child.id);
-      getAllChildIds(child, ids);
-    }
+      getAllChildIds(child, ids); // Recursive call for nested children
+    });
   }
   return ids;
 };
