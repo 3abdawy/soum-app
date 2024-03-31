@@ -1,19 +1,25 @@
 import React from 'react';
 import {NavigationContainer} from '@react-navigation/native';
-import DrawerNavigator from './DrawerNavigator';
 import {UseCheckInternetConnection} from '@shared/Hooks/UseCheckInternetConnection';
 import ConnectionLostSnackBar from '@shared/Components/ConnectionLostSnackBar';
 import {createNavigationContainerRef} from '@react-navigation/native';
+import {createNativeStackNavigator} from '@react-navigation/native-stack';
+import Products from '@screens/Home/Products';
+import {PRODUCTS} from './routes';
 
 export const navigationRef = createNavigationContainerRef();
-
+const Stack = createNativeStackNavigator();
 const MainNavigator = () => {
   const {isConnected} = UseCheckInternetConnection();
-  const navigatorHandler = () => <DrawerNavigator />;
 
   return (
     <NavigationContainer ref={navigationRef}>
-      {navigatorHandler()}
+      <Stack.Navigator
+        screenOptions={{
+          headerShown: true,
+        }}>
+        <Stack.Screen name={PRODUCTS} component={Products} />
+      </Stack.Navigator>
       {isConnected || isConnected === null ? null : <ConnectionLostSnackBar />}
     </NavigationContainer>
   );
