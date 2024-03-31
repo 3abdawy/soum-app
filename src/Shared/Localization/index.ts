@@ -13,8 +13,8 @@ const {isRTL} = I18nManager;
 
 i18.use(initReactI18next).init({
   compatibilityJSON: 'v3',
-  lng: isRTL ? 'ar' : 'en',
-  fallbackLng: 'ar',
+  lng: 'en',
+  fallbackLng: 'en',
   resources,
 });
 
