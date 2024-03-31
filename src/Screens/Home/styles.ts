@@ -5,53 +5,30 @@ const styles = StyleSheet.create({
   scrollViewContainer: {
     marginTop: 10,
   },
-  headerContainer: {
-    flex: 1,
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    paddingHorizontal: 10,
-    paddingVertical: 6,
-  },
-  header: {
-    flexDirection: 'row',
-    backgroundColor: Colors.Base.Primary.White,
-    padding: 10,
-    gap: 8,
-    flex: 0.8,
-    alignItems: 'center',
-  },
-  headerText: {
-    textAlign: 'right',
-    fontSize: 16,
-    fontWeight: '500',
-  },
-  countContainer: {
-    borderRadius: 15,
-    width: 30,
-    height: 30,
-    alignItems: 'center',
-    justifyContent: 'center',
-    backgroundColor: Colors.Base.Primary.Light,
-  },
-  content: {
-    borderRadius: 10,
-    width: '95%',
-    alignSelf: 'center',
-    marginBottom: 10,
-  },
-  headerNote: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    height: 64,
-    paddingVertical: 8,
-    paddingHorizontal: 10,
-    borderRadius: 8,
-    gap: 8,
-  },
   container: {
-    marginBottom: 8,
+    flex: 1,
+    marginTop: 40,
+  },
+  filterContainer: {
+    flexDirection: 'row',
+    justifyContent: 'space-around',
+    marginBottom: 20,
+  },
+  filterButton: {
+    backgroundColor: '#ddd',
+    padding: 10,
+    borderRadius: 5,
+  },
+  filterText: {
+    fontWeight: 'bold',
+  },
+  itemContainer: {
+    padding: 10,
+    borderBottomWidth: 1,
+    borderBottomColor: '#eee',
+  },
+  itemText: {
+    fontSize: 16,
   },
   emptyContainer: {
     flex: 1,
@@ -95,6 +72,13 @@ const styles = StyleSheet.create({
   cardHeaderText: {
     textAlign: 'left',
     flex: 1,
+  },
+  selectedFilter: {
+    backgroundColor: '#007bff',
+    color: '#ffffff',
+  },
+  childFilterContainer: {
+    paddingLeft: 20,
   },
 });
 
