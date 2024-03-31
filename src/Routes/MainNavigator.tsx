@@ -17,6 +17,7 @@ const MainNavigator = () => {
       <Stack.Navigator
         screenOptions={{
           headerShown: true,
+          headerTitle: 'SOUM Filter demo',
         }}>
         <Stack.Screen name={PRODUCTS} component={Products} />
       </Stack.Navigator>
